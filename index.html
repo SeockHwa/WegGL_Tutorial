@@ -1,0 +1,44 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Final Project</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="gl-matrix.js"> </script>
+<script> 
+window['mat4'] = glMatrix.mat4;
+window['vec4'] = glMatrix.vec4;
+window['vec3'] = glMatrix.vec4;
+</script>
+<script type="text/javascript" src="script.js"> </script>
+
+</head>
+
+<body onload="main()">
+    <canvas id="helloapicanvas" style="border: none;" width="800" height="600"></canvas>
+	<br><br>
+    <button onclick="textureChange()">Image texture or Video Texture</button>
+    <button onclick="videoToggle()">Video Play or Stop </button>
+    <button onclick="videoSound()">Sound On/Off</button>
+	<br><br>
+    <input type="file" id="NewImage" accept="image/*">
+    <input type="file" id="NewVideo" accept="video/*">
+	
+	<br>
+    <div id="wrap_s">
+        <div>TEXTURE_WRAP_S: </div>
+        <div><input type="radio" id="wrap_s0" name="wrap_s" checked="true"/><label for="wrap_s0">REPEAT</label></div>
+        <div><input type="radio" id="wrap_s1" name="wrap_s" /><label for="wrap_s1">CLAMP_TO_EDGE</label></div>
+        <div><input type="radio" id="wrap_s2" name="wrap_s" /><label for="wrap_s2">MIRRORED_REPEAT</label></div>
+    </div>
+	<br>
+    <div id="wrap_t">
+        <div><span>TEXTURE_WRAP_T: </span></div>
+        <div><input type="radio" id="wrap_t0" name="wrap_t" checked="true"/><label for="wrap_t0">REPEAT</label></div>
+        <div><input type="radio" id="wrap_t1" name="wrap_t" /><label for="wrap_t1">CLAMP_TO_EDGE</label></div>
+        <div><input type="radio" id="wrap_t2" name="wrap_t" /><label for="wrap_t2">MIRRORED_REPEAT</label></div>
+    </div>
+
+</body>
+
+</html>
